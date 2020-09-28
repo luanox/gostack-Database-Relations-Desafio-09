@@ -288,7 +288,8 @@ describe('App', () => {
       });
 
     const response = await request(app).get(`/orders/${order.body.id}`);
-
+      // console.log(response.body);
+      
     expect(response.body).toEqual(
       expect.objectContaining({
         customer: expect.objectContaining({
